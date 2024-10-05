@@ -29,6 +29,82 @@ nav {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0; /* Reduce padding for mobile */
+    }
+
+    nav {
+        flex-direction: column; /* Stack logo and nav links vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .logo {
+        margin-bottom: 0.5rem; /* Add space below the logo */
+    }
+
+    .nav-links {
+        display: flex; /* Use flexbox to arrange links in a row */
+        flex-direction: row; /* Keep links in a row */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        justify-content: center; /* Center the links */
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    .nav-links li {
+        margin: 0 1rem; /* Add horizontal spacing between links */
+        margin-top: 2.8rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .language-selector {
+        margin-top: 0.5rem; /* Add space above the flags */
+        display: flex; /* Align flags in a row */
+    }
+
+    .language-selector img {
+        width: 30px; /* Adjust flag size */
+        height: auto; /* Maintain aspect ratio */
+        cursor: pointer;
+        margin: 0 5px; /* Add spacing between flags */
+    }
+
+    .photo-container {
+        flex-direction: column; /* Stack photos vertically */
+        align-items: center; /* Center align photos */
+        margin: 0 10px;
+    }
+
+    .photo-container .photo {
+        width: 100%; /* Make photos full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        position: relative; /* Position relative for absolute child */
+    }
+
+    .photo-container .photo img {
+        width: 100%;
+        height: 200px; /* Set a fixed height for mobile */
+        object-fit: cover; /* Cover the area without stretching */
+    }
+
+    .gallery-collection h2{
+        margin-top: 5rem;
+    }
+    
+    h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .view-all-collections-button button {
+        width: 100%; /* Full width button */
+    }
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -93,12 +169,11 @@ nav {
     padding: 2rem 5%;
     text-align: center;
     flex: 1;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
 }
 
 .gallery {
     padding-top: 5rem;
-
 }
 
 h2 {

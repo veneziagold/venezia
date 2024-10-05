@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezia Gold - Full Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Venezia Gold</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" data-en="Home" data-tr="Ana Sayfa">Ana Sayfa</a></li>
+                <li><a href="index.html#contact" data-en="Contact" data-tr="İletişim">İletişim</a></li>
+            </ul>
+            <div class="language-selector">
+                <img src="turkish-flag.png" alt="Türkçe" onclick="setLanguage('tr')">
+                <img src="english-flag.png" alt="English" onclick="setLanguage('en')">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="collection" class="gallery">
+            <h2 data-en="Our Full Collection" data-tr="Koleksiyonumuz">Koleksiyonumuz</h2>
+            <div class="tabs">
+                <button class="tab-link active" onclick="showCollection('wristlets')" data-en="Wristlets" data-tr="Bileklikler">Bileklikler</button>
+                <button class="tab-link" onclick="showCollection('earrings')" data-en="Earrings" data-tr="Küpe">Küpeler</button>
+            </div>
+            
+            <div id="wristlets" class="tab-content">
+                <div class="photo-container">
+                    <div class="photo" data-aos="fade-up">
+                        <img src="images/BLK-30 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/BLK-32 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="400">
+                        <img src="images/BLK-42 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="600">
+                        <img src="images/BLK-46 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="800">
+                        <img src="images/BLK-48 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="1000">
+                        <img src="images/BLK011 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="1200">
+                        <img src="images/BLK012 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="1400">
+                        <img src="images/BLK013 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="1600">
+                        <img src="images/BLK014 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="1800">
+                        <img src="images/BLK015 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="2000">
+                        <img src="images/BLK026 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="2200">
+                        <img src="images/BLK027 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="2400">
+                        <img src="images/BLK028 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="2600">
+                        <img src="images/BLK029 copy.jpg" alt="Jewelry item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="2800">
+                        <img src="images/BLK030 copy.jpg" alt="Jewelry item">
+                    </div>
+                </div>
+            </div>
+
+            <div id="earrings" class="tab-content" style="display:none;">
+                <div class="photo-container">
+                    <div class="photo" data-aos="fade-up">
+                        <img src="images/KKP-24 copy 2.jpg" alt="Earring item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/KKP-35 copy 2.jpg" alt="Earring item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="400">
+                        <img src="images/KKP-39 copy 2.jpg" alt="Earring item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="600">
+                        <img src="images/KKP-44 copy 2.jpg" alt="Earring item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="800">
+                        <img src="images/KKP-47 copy 2.jpg" alt="Earring item">
+                    </div>
+                    <div class="photo" data-aos="fade-up" data-aos-delay="1000">
+                        <img src="images/KKP-664 copy 2.jpg" alt="Earring item">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Venezia Gold. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 400, // Reduced animation duration slightly
+            once: true
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function showCollection(collection) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tab-content");
+            var tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(collection).style.display = "block";
+            event.currentTarget.className += " active";
+            AOS.refresh(); // Refresh AOS to apply animations
+        }
+
+        // Show wristlets by default
+        document.getElementById("wristlets").style.display = "block";
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-en]').forEach(element => {
+                if (lang === 'en') {
+                    element.textContent = element.getAttribute('data-en');
+                } else if (lang === 'tr') {
+                    element.textContent = element.getAttribute('data-tr');
+                }
+            });
+        }
+
+        // Set default language
+        setLanguage('tr');
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezia Gold - Exquisite Jewelry</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Venezia Gold</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+                <li><a href="collection.html" data-en="Collection" data-tr="Koleksiyon">Collection</a></li>
+                <li><a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a></li>
+            </ul>
+            <div class="language-selector">
+                <img src="turkish-flag.png" alt="Türkçe" onclick="setLanguage('tr')">
+                <img src="english-flag.png" alt="English" onclick="setLanguage('en')">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="banner">
+            <!-- Banner content -->
+        </section>
+
+        <section id="collection-preview" class="gallery">
+            <h2 data-en="Collection Preview" data-tr="Koleksiyonumuzdan Örnekler">Koleksiyonumuzdan Örnekler</h2>
+            <div class="photo-container">
+                <div class="photo" data-aos="fade-up">
+                    <img src="images/BLK-30 copy.jpg" alt="Jewelry item">
+                </div>
+                <div class="photo" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/BLK-32 copy.jpg" alt="Jewelry item">
+                </div>
+                <div class="photo" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/BLK-42 copy.jpg" alt="Jewelry item">
+                </div>
+                <div class="photo" data-aos="fade-up">
+                    <img src="images/KKP-35 copy 2.jpg" alt="Jewelry item">
+                </div>
+                <div class="photo" data-aos="fade-up">
+                    <img src="images/KKP-44 copy 2.jpg" alt="Jewelry item">
+                </div>
+                <div class="photo" data-aos="fade-up">
+                    <img src="images/KKP-47 copy 2.jpg" alt="Jewelry item">
+                </div>
+            </div>
+            <a href="collection.html" class="view-all-collections-button">
+                <button data-en="View All Collections" data-tr="Tüm Koleksiyonları İncele">Tüm Koleksiyonları İncele</button>
+            </a>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 data-en="Contact Us" data-tr="Bize Ulaşın">Bize Ulaşın</h2>
+            <div class="contact-container">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d973.3976474761856!2d28.817513330006463!3d41.002224411976314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s29%20Ekim%20Caddesi%20Kuyumcu%20Kent%20At%C3%B6lye%20Blok%204%20Kat%2011%20Sok%20No%204%2C%20Yenibosna%2C%20Bah%C3%A7elievler%2C%20Istanbul!5e0!3m2!1sen!2sus!4v1728140721576!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-info">
+                    <div class="address-section">
+                        <h3 data-en="Address" data-tr="Adres">Adres</h3>
+                        <p>29 Ekim Caddesi Kuyumcu Kent Atölye Blok 4 Kat 11 Sok No 4, Yenibosna, Bahçelievler, Istanbul</p>
+                    </div>
+                    <div class="details-section">
+                        <h3 data-en="Contact Details" data-tr="İletişim Bilgileri">İletişim Bilgileri</h3>
+                        <p>Email: veneziagold1@gmail.com</p>
+                        <p data-en="Phone: +90 533 541 46 62" data-tr="Telefon: +90 533 541 46 62">Telefon: +90 533 541 46 62</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Venezia Gold. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800, // Reduced animation duration slightly
+            once: true
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Language switching function
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-en]').forEach(element => {
+                if (lang === 'en') {
+                    element.textContent = element.getAttribute('data-en');
+                } else if (lang === 'tr') {
+                    element.textContent = element.getAttribute('data-tr');
+                }
+            });
+        }
+
+        // Set default language
+        setLanguage('tr');
+    </script>
+</body>
+</html>

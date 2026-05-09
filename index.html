@@ -42,20 +42,22 @@
     </header>
 
     <main>
-        <section id="home" class="banner" aria-label="Venezia Gold takı vitrini">
-            <div class="hero-rotator" data-hero-rotator>
-                <picture class="hero-slide active">
-                    <source srcset="images/hero/hero-bracelets-640.jpg 640w, images/hero/hero-bracelets-960.jpg 960w, images/hero/hero-bracelets-1600.jpg 1600w" sizes="100vw">
+        <section id="home" class="hero-editorial" aria-label="Venezia Gold takı vitrini">
+            <div class="hero-spread">
+                <picture class="hero-panel hero-panel-large">
+                    <source srcset="images/hero/hero-bracelets-640.jpg 640w, images/hero/hero-bracelets-960.jpg 960w, images/hero/hero-bracelets-1600.jpg 1600w" sizes="(max-width: 820px) 92vw, 58vw">
                     <img src="images/hero/hero-bracelets-960.jpg" alt="Altın bilekliklerin sıcak taş yüzey üzerinde lüks ürün fotoğrafı" fetchpriority="high" loading="eager">
                 </picture>
-                <picture class="hero-slide">
-                    <source srcset="images/hero/hero-earrings-640.jpg 640w, images/hero/hero-earrings-960.jpg 960w, images/hero/hero-earrings-1600.jpg 1600w" sizes="100vw">
-                    <img src="images/hero/hero-earrings-960.jpg" alt="Krem satin ve seramik üzerinde altın küpe koleksiyonu" loading="eager" decoding="async">
-                </picture>
-                <picture class="hero-slide">
-                    <source srcset="images/hero/hero-atelier-640.jpg 640w, images/hero/hero-atelier-960.jpg 960w, images/hero/hero-atelier-1600.jpg 1600w" sizes="100vw">
-                    <img src="images/hero/hero-atelier-960.jpg" alt="Atölye ortamında kadife tepsi üzerinde altın bileklik ve küpeler" loading="eager" decoding="async">
-                </picture>
+                <div class="hero-panel-stack">
+                    <picture class="hero-panel">
+                        <source srcset="images/hero/hero-earrings-640.jpg 640w, images/hero/hero-earrings-960.jpg 960w, images/hero/hero-earrings-1600.jpg 1600w" sizes="(max-width: 820px) 92vw, 34vw">
+                        <img src="images/hero/hero-earrings-640.jpg" alt="Krem satin ve seramik üzerinde altın küpe koleksiyonu" loading="eager" decoding="async">
+                    </picture>
+                    <picture class="hero-panel">
+                        <source srcset="images/hero/hero-atelier-640.jpg 640w, images/hero/hero-atelier-960.jpg 960w, images/hero/hero-atelier-1600.jpg 1600w" sizes="(max-width: 820px) 92vw, 34vw">
+                        <img src="images/hero/hero-atelier-640.jpg" alt="Atölye ortamında kadife tepsi üzerinde altın bileklik ve küpeler" loading="eager" decoding="async">
+                    </picture>
+                </div>
             </div>
         </section>
 

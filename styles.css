@@ -126,37 +126,48 @@ nav {
     border-radius: 4px;
 }
 
-.banner {
-    position: relative;
+.hero-editorial {
     width: 100%;
-    min-height: min(70vh, 680px);
+    padding: clamp(1.5rem, 4vw, 3rem) 5%;
+    background:
+        linear-gradient(180deg, #f7f1e7 0%, #fbfaf7 100%);
+}
+
+.hero-spread {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.9fr);
+    gap: clamp(0.9rem, 2vw, 1.35rem);
+    align-items: stretch;
+}
+
+.hero-panel-stack {
+    display: grid;
+    gap: clamp(0.9rem, 2vw, 1.35rem);
+}
+
+.hero-panel {
+    position: relative;
+    display: block;
     overflow: hidden;
-    background: #efe9dc;
+    min-height: 0;
+    border: 1px solid rgba(189, 150, 80, 0.22);
+    border-radius: 8px;
+    background: #f4eadc;
+    box-shadow: 0 20px 50px rgba(37, 34, 30, 0.14);
 }
 
-.hero-rotator {
-    position: relative;
-    width: 100%;
-    height: min(70vh, 680px);
+.hero-panel-large {
+    min-height: clamp(360px, 42vw, 560px);
 }
 
-.hero-slide {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1.2s ease;
+.hero-panel:not(.hero-panel-large) {
+    min-height: 0;
+    aspect-ratio: 16 / 8.2;
 }
 
-.hero-slide.active {
-    opacity: 1;
-    z-index: 1;
-}
-
-.hero-slide img {
-    display: block;
+.hero-panel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -367,10 +378,20 @@ footer p {
         justify-content: center;
     }
 
-    .banner,
-    .hero-rotator {
+    .hero-editorial {
+        padding-top: 1rem;
+    }
+
+    .hero-spread {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-panel-large {
         min-height: 44vh;
-        height: 44vh;
+    }
+
+    .hero-panel:not(.hero-panel-large) {
+        aspect-ratio: 16 / 9;
     }
 
     .gallery,
@@ -411,8 +432,31 @@ footer p {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .hero-slide {
-        transition: none;
+@media (max-width: 520px) {
+    .hero-editorial {
+        padding-inline: 0;
+    }
+
+    .hero-spread {
+        gap: 0;
+    }
+
+    .hero-panel {
+        border-inline: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .hero-panel-stack {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    .hero-panel-large {
+        min-height: 44vh;
+    }
+
+    .hero-panel:not(.hero-panel-large) {
+        aspect-ratio: 1 / 1;
     }
 }

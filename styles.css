@@ -222,7 +222,9 @@ h3 {
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background-color: var(--surface);
+    background:
+        linear-gradient(135deg, rgba(189, 150, 80, 0.08), rgba(255, 255, 255, 0.88) 34%),
+        var(--surface);
     box-shadow: var(--shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -236,6 +238,7 @@ h3 {
     display: block;
     width: 100%;
     aspect-ratio: 1 / 1;
+    background-color: #faf7f0;
     object-fit: cover;
 }
 

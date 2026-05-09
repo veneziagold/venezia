@@ -2,6 +2,7 @@ const languageButtons = document.querySelectorAll('[data-language]');
 const translatedElements = document.querySelectorAll('[data-en][data-tr]');
 const tabButtons = document.querySelectorAll('[data-collection]');
 const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+const heroRotator = document.querySelector('[data-hero-rotator]');
 
 function setLanguage(language) {
     document.documentElement.lang = language;
@@ -53,4 +54,43 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
 });
 
+function initHeroRotator() {
+    if (!heroRotator || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    const slides = heroRotator.querySelectorAll('.hero-slide');
+    if (slides.length < 2) {
+        return;
+    }
+
+    let activeIndex = 0;
+    let intervalId;
+
+    const showNextSlide = () => {
+        slides[activeIndex].classList.remove('active');
+        activeIndex = (activeIndex + 1) % slides.length;
+        slides[activeIndex].classList.add('active');
+    };
+
+    const start = () => {
+        if (!intervalId) {
+            intervalId = window.setInterval(showNextSlide, 6500);
+        }
+    };
+
+    const stop = () => {
+        window.clearInterval(intervalId);
+        intervalId = undefined;
+    };
+
+    heroRotator.addEventListener('mouseenter', stop);
+    heroRotator.addEventListener('mouseleave', start);
+    heroRotator.addEventListener('focusin', stop);
+    heroRotator.addEventListener('focusout', start);
+
+    start();
+}
+
 setLanguage(localStorage.getItem('venezia-language') || 'tr');
+initHeroRotator();

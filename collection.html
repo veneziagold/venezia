@@ -1,166 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venezia Gold | Yüksek Kalite Takı Koleksiyonu</title>
+    <meta name="description" content="Venezia Gold bileklik ve küpe koleksiyonunu inceleyin. El yapımı altın takı modelleri İstanbul Kuyumcu Kent'te.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Venezia Gold Koleksiyonu">
+    <meta property="og:description" content="Venezia Gold'un bileklik ve küpe koleksiyonlarını keşfedin.">
+    <meta property="og:image" content="https://www.veneziagold.com.tr/banner-bg.jpg">
+    <meta property="og:url" content="https://www.veneziagold.com.tr/collection.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://www.veneziagold.com.tr/collection.html">
+    <link rel="alternate" hreflang="tr" href="https://www.veneziagold.com.tr/collection.html">
+    <link rel="alternate" hreflang="en" href="https://www.veneziagold.com.tr/collection.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Venezia Gold | Koleksiyon</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="site.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">Venezia Gold</a>
-            </div>
+        <nav aria-label="Ana navigasyon">
+            <a class="logo" href="index.html">Venezia Gold</a>
             <ul class="nav-links">
                 <li><a href="index.html#home" data-en="Home" data-tr="Ana Sayfa">Ana Sayfa</a></li>
                 <li><a href="index.html#contact" data-en="Contact" data-tr="İletişim">İletişim</a></li>
             </ul>
-            <div class="language-selector">
-                <img src="turkish-flag.png" alt="Türkçe" onclick="setLanguage('tr')">
-                <img src="english-flag.png" alt="English" onclick="setLanguage('en')">
+            <div class="language-selector" aria-label="Dil seçimi">
+                <button type="button" data-language="tr" aria-label="Türkçe">
+                    <img src="turkish-flag.png" alt="">
+                </button>
+                <button type="button" data-language="en" aria-label="English">
+                    <img src="english-flag.png" alt="">
+                </button>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="collection" class="gallery gallery-collection">
-            <h2 data-en="Our Full Collection" data-tr="Koleksiyonumuz">Koleksiyonumuz</h2>
-            <div class="tabs">
-                <button class="tab-link active" onclick="showCollection('wristlets')" data-en="Wristlets" data-tr="Bileklikler">Bileklikler</button>
-                <button class="tab-link" onclick="showCollection('earrings')" data-en="Earrings" data-tr="Küpeler">Küpeler</button>
+            <h1 data-en="Our Full Collection" data-tr="Koleksiyonumuz">Koleksiyonumuz</h1>
+            <div class="tabs" role="tablist" aria-label="Koleksiyon kategorileri">
+                <button id="wristlets-tab" class="tab-link active" type="button" role="tab" aria-selected="true" aria-controls="wristlets" data-collection="wristlets" data-en="Bracelets" data-tr="Bileklikler">Bileklikler</button>
+                <button id="earrings-tab" class="tab-link" type="button" role="tab" aria-selected="false" aria-controls="earrings" data-collection="earrings" data-en="Earrings" data-tr="Küpeler">Küpeler</button>
             </div>
-            
-            <div id="wristlets" class="tab-content">
+
+            <div id="wristlets" class="tab-content active" role="tabpanel" aria-labelledby="wristlets-tab">
                 <div class="photo-container">
-                    <div class="photo" data-aos="fade-up">
-                        <img src="images/BLK-30 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/BLK-32 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/BLK-42 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="600">
-                        <img src="images/BLK-46 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="800">
-                        <img src="images/BLK-48 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="1000">
-                        <img src="images/BLK011 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="1200">
-                        <img src="images/BLK012 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="1400">
-                        <img src="images/BLK013 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="1600">
-                        <img src="images/BLK014 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="1800">
-                        <img src="images/BLK015 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="2000">
-                        <img src="images/BLK026 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="2200">
-                        <img src="images/BLK027 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="2400">
-                        <img src="images/BLK028 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="2600">
-                        <img src="images/BLK029 copy.jpg" alt="Jewelry item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="2800">
-                        <img src="images/BLK030 copy.jpg" alt="Jewelry item">
-                    </div>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK-30%20copy-640.jpg" srcset="images/optimized/BLK-30%20copy-640.jpg 640w, images/optimized/BLK-30%20copy-960.jpg 960w, images/BLK-30%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Altın el yapımı bileklik modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK-32%20copy-640.jpg" srcset="images/optimized/BLK-32%20copy-640.jpg 640w, images/optimized/BLK-32%20copy-960.jpg 960w, images/BLK-32%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Taş detaylı altın bileklik modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK-42%20copy-640.jpg" srcset="images/optimized/BLK-42%20copy-640.jpg 640w, images/optimized/BLK-42%20copy-960.jpg 960w, images/BLK-42%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Zarif altın bileklik tasarımı" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK-46%20copy-640.jpg" srcset="images/optimized/BLK-46%20copy-640.jpg 640w, images/optimized/BLK-46%20copy-960.jpg 960w, images/BLK-46%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Klasik altın bileklik modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK-48%20copy-640.jpg" srcset="images/optimized/BLK-48%20copy-640.jpg 640w, images/optimized/BLK-48%20copy-960.jpg 960w, images/BLK-48%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Parlak altın bileklik tasarımı" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK011%20copy-640.jpg" srcset="images/optimized/BLK011%20copy-640.jpg 640w, images/optimized/BLK011%20copy-960.jpg 960w, images/BLK011%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="İnce işçilikli altın bileklik" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK012%20copy-640.jpg" srcset="images/optimized/BLK012%20copy-640.jpg 640w, images/optimized/BLK012%20copy-960.jpg 960w, images/BLK012%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="El yapımı bileklik koleksiyon parçası" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK013%20copy-640.jpg" srcset="images/optimized/BLK013%20copy-640.jpg 640w, images/optimized/BLK013%20copy-960.jpg 960w, images/BLK013%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Altın bileklik koleksiyon modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK014%20copy-640.jpg" srcset="images/optimized/BLK014%20copy-640.jpg 640w, images/optimized/BLK014%20copy-960.jpg 960w, images/BLK014%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Sade altın bileklik tasarımı" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK015%20copy-640.jpg" srcset="images/optimized/BLK015%20copy-640.jpg 640w, images/optimized/BLK015%20copy-960.jpg 960w, images/BLK015%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Detaylı altın bileklik modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK026%20copy-640.jpg" srcset="images/optimized/BLK026%20copy-640.jpg 640w, images/optimized/BLK026%20copy-960.jpg 960w, images/BLK026%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Modern altın bileklik" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK027%20copy-640.jpg" srcset="images/optimized/BLK027%20copy-640.jpg 640w, images/optimized/BLK027%20copy-960.jpg 960w, images/BLK027%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="İşlemeli altın bileklik" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK028%20copy-640.jpg" srcset="images/optimized/BLK028%20copy-640.jpg 640w, images/optimized/BLK028%20copy-960.jpg 960w, images/BLK028%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Altın bileklik vitrin parçası" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK029%20copy-640.jpg" srcset="images/optimized/BLK029%20copy-640.jpg 640w, images/optimized/BLK029%20copy-960.jpg 960w, images/BLK029%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Zincir detaylı altın bileklik" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/BLK030%20copy-640.jpg" srcset="images/optimized/BLK030%20copy-640.jpg 640w, images/optimized/BLK030%20copy-960.jpg 960w, images/BLK030%20copy.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="El yapımı altın bileklik koleksiyon ürünü" loading="lazy" decoding="async">
+                    </figure>
                 </div>
             </div>
 
-            <div id="earrings" class="tab-content" style="display:none;">
+            <div id="earrings" class="tab-content" role="tabpanel" aria-labelledby="earrings-tab" hidden>
                 <div class="photo-container">
-                    <div class="photo" data-aos="fade-up">
-                        <img src="images/KKP-24 copy 2.jpg" alt="Earring item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/KKP-35 copy 2.jpg" alt="Earring item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/KKP-39 copy 2.jpg" alt="Earring item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="600">
-                        <img src="images/KKP-44 copy 2.jpg" alt="Earring item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="800">
-                        <img src="images/KKP-47 copy 2.jpg" alt="Earring item">
-                    </div>
-                    <div class="photo" data-aos="fade-up" data-aos-delay="1000">
-                        <img src="images/KKP-664 copy 2.jpg" alt="Earring item">
-                    </div>
+                    <figure class="photo">
+                        <img src="images/optimized/KKP-24%20copy%202-640.jpg" srcset="images/optimized/KKP-24%20copy%202-640.jpg 640w, images/optimized/KKP-24%20copy%202-960.jpg 960w, images/KKP-24%20copy%202.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Altın küpe koleksiyon modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/KKP-35%20copy%202-640.jpg" srcset="images/optimized/KKP-35%20copy%202-640.jpg 640w, images/optimized/KKP-35%20copy%202-960.jpg 960w, images/KKP-35%20copy%202.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Klasik altın küpe modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/KKP-39%20copy%202-640.jpg" srcset="images/optimized/KKP-39%20copy%202-640.jpg 640w, images/optimized/KKP-39%20copy%202-960.jpg 960w, images/KKP-39%20copy%202.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="El yapımı altın küpe" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/KKP-44%20copy%202-640.jpg" srcset="images/optimized/KKP-44%20copy%202-640.jpg 640w, images/optimized/KKP-44%20copy%202-960.jpg 960w, images/KKP-44%20copy%202.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Zarif altın küpe tasarımı" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/KKP-47%20copy%202-640.jpg" srcset="images/optimized/KKP-47%20copy%202-640.jpg 640w, images/optimized/KKP-47%20copy%202-960.jpg 960w, images/KKP-47%20copy%202.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Parlak altın küpe modeli" loading="lazy" decoding="async">
+                    </figure>
+                    <figure class="photo">
+                        <img src="images/optimized/KKP-664%20copy%202-640.jpg" srcset="images/optimized/KKP-664%20copy%202-640.jpg 640w, images/optimized/KKP-664%20copy%202-960.jpg 960w, images/KKP-664%20copy%202.jpg 1500w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 42vw, 360px" alt="Altın küpe koleksiyon parçası" loading="lazy" decoding="async">
+                    </figure>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p data-en="&copy; 2024 Venezia Gold. All rights reserved." data-tr="&copy; 2024 Venezia Gold. Tüm hakları saklıdır.">
-            &copy; 2024 Venezia Gold. Tüm hakları saklıdır.
+        <p data-en="&copy; 2026 Venezia Gold. All rights reserved." data-tr="&copy; 2026 Venezia Gold. Tüm hakları saklıdır.">
+            &copy; 2026 Venezia Gold. Tüm hakları saklıdır.
         </p>
     </footer>
-
-    <script>
-        AOS.init({
-            duration: 400, // Reduced animation duration slightly
-            once: true
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        function showCollection(collection) {
-            var i;
-            var tabcontent = document.getElementsByClassName("tab-content");
-            var tablinks = document.getElementsByClassName("tab-link");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(collection).style.display = "block";
-            event.currentTarget.className += " active";
-            AOS.refresh(); // Refresh AOS to apply animations
-        }
-
-        // Show wristlets by default
-        document.getElementById("wristlets").style.display = "block";
-
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-en]').forEach(element => {
-                if (lang === 'en') {
-                    element.textContent = element.getAttribute('data-en');
-                } else if (lang === 'tr') {
-                    element.textContent = element.getAttribute('data-tr');
-                }
-            });
-        }
-
-        // Set default language
-        setLanguage('tr');
-    </script>
 </body>
 </html>
